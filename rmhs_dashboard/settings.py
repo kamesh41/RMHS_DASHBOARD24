@@ -106,13 +106,16 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # Database configuration for Railway
 import dj_database_url
 
-DATABASE_URL = os.environ.get('DATABASE_URL')
-if DATABASE_URL:
-    DATABASES = {
-        'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',  # Replace with PGDATABASE
+        'USER': 'postgres',  # Replace with PGUSER
+        'PASSWORD': 'POGVnybdQyMMrPifCSFjaSTiqKIUkmBw',  # Replace with PGPASSWORD
+        'HOST': 'containers-us-west-123.railway.app',  # Replace with PGHOST
+        'PORT': '5432',  # Replace with PGPORT
     }
-else:
-    raise ImproperlyConfigured("DATABASE_URL environment variable not set")
+}
 
 
 # Password validation
