@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-default-key-for-dev')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = True
 
 # Updated ALLOWED_HOSTS to explicitly include Railway domain
 ALLOWED_HOSTS = ['web-production-a087.up.railway.app', 'localhost', '127.0.0.1', '*']
