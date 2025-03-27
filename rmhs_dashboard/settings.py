@@ -112,7 +112,7 @@ DATABASES = {
         'NAME': 'railway',  # Replace with PGDATABASE
         'USER': 'postgres',  # Replace with PGUSER
         'PASSWORD': 'POGVnybdQyMMrPifCSFjaSTiqKIUkmBw',  # Replace with PGPASSWORD
-        'HOST': 'containers-us-west-123.railway.app',  # Replace with PGHOST
+        'HOST': 'postgres.railway.internal',  # Replace with PGHOST
         'PORT': '5432',  # Replace with PGPORT
     }
 }
