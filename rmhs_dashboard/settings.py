@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'rmhs_dashboard.wsgi.application'
 # Static files configuration
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = []  # Remove the non-existent directory
+STATICFILES_DIRS = [BASE_DIR / "static"]  # Remove the non-existent directory
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
